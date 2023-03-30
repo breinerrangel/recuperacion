@@ -12,6 +12,13 @@ body {
 
 
 }
+.span{
+    display: none;
+    
+}
+.span2{
+    display: none;
+}
 
 .super-box {
 
