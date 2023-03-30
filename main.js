@@ -22,6 +22,7 @@ const personas=async()=>{
     let url=await fetch("https://jsonplaceholder.typicode.com/users")
     let respuesta=await url.json()
     console.log(respuesta)
+    localStorage.setItem("api",JSON.stringify(respuesta))
 
     
         
@@ -34,9 +35,11 @@ const personas=async()=>{
         if(respuesta.find(elements=>elements.username==usuario.value)){
             pocicion=respuesta.findIndex(elements=>elements.username==usuario.value)
             if(respuesta[pocicion].email==email.value){
-                    alert("ingresado")
-                    email.value=""
-                    usuario.value=""
+                location.href="indexx.html"
+
+                email.value=""
+                usuario.value=""
+                
 
             }
             else{
